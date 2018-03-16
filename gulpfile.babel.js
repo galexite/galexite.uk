@@ -60,7 +60,9 @@ gulp.task("server", ["hugo", "css", "js", "fonts"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
-    }
+    },
+    port: process.env.PORT || 3000,
+    host: process.env.IP || "127.0.0.1"
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);

@@ -3,12 +3,16 @@
  */
 @import "imports/reset.css";
 
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
 
-/*
-  Or add your statements here:
- */
-body{
-  font-family: sans-serif;
-  font-size: 1em;
-  text-align: center;
+h1, h2, h3, h4 {
+  font-family: "Varela";
+  font-weight: normal;
+}
+
+.jumbotron {
+  background-color: #03A9F5;
+  border-radius: 0;
 }
