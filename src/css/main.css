@@ -12,16 +12,10 @@ h1, h2, h3, h4 {
   font-weight: normal;
 }
 
-.masthead {
+.navbar {
   background: #3abcf4;
   background: radial-gradient(ellipse at top center, #3abcf4 0%, #03a9f5 100%);
   padding: 3em 0;
-}
-
-.masthead a {
-  color: white;
-  font-family: "Varela";
-  font-size: xx-large;
 }
 
 .content {
