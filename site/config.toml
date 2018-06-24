@@ -7,3 +7,21 @@ title = "galexite.uk"
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[menu]
+
+[[menu.main]]
+identifier = "blog"
+name = "blog"
+url = "/blog"
+
+[[menu.main]]
+identifier = "portfolio"
+name = "portfolio"
+url = "/portfolio"
+
+[[menu.main]]
+identifier = "contact"
+name = "contact"
+url = "/contact"
+weight = 100
