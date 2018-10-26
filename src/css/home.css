@@ -1,0 +1,18 @@
+html, body {
+  background-color: #3abcf4;
+  color: #fff;
+}
+
+.home-hero-background {
+  font-family: Menlo, 'Roboto Mono', monospace;
+  font-size: 0.7em;
+  color: #2a87af;
+  speak: none;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.home-hero-background p {
+  height: 184px;
+}

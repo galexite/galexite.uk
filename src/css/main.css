@@ -7,9 +7,8 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Varela";
-  font-weight: normal;
+h1, h2 {
+  font-weight: 700;
 }
 
 .navbar {

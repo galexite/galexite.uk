@@ -6,29 +6,9 @@
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
     <title>{{ $.Site.Title }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|Varela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css"/>
+    {{ block "styles" . }}
+    {{ end }}
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="/">galexite.uk</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            {{ $currentPage := . }}
-            {{ range .Site.Menus.main }}
-            <li class="nav-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
-              <a class="nav-link" href="{{ .URL }}">
-                {{ .Name }}{{ if $currentPage.IsMenuCurrent "main" . }}
-                <span class="sr-only">(current)</span>
-                {{ end }}
-              </a>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <body> 
