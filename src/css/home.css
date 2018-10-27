@@ -1,6 +1,7 @@
-html, body {
+.home-hero-root {
   background-color: #3abcf4;
   color: #fff;
+  padding-bottom: 1em;
 }
 
 .home-hero-background {

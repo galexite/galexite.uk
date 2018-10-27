@@ -2,34 +2,44 @@
 {{ define "styles" }}
     <link rel="stylesheet" href="css/home.css" />
 {{ end }}
-    <div class="home-hero container">
-      <div class="home-hero-background">
-        <p>
-          iVBORw0KGgoAAAANSUhEUgAAAcwAAAHMCAIAAADXuQ/RAACAAElEQVR4nOydB3hUxdrH33c2vffeeyOFHkgg9A7SEUQUC3rtXr3YUK/Y9drwotjpvYfQSSCF9N5Deu+9Z+f9ntmNIYL1Kp/t/B6fPLh7ds6c2bP/+b9zZt5Rke3vAAkJCQmJWwP7vSsgISEh8VdGElkJCQmJW4gkshISEhK3EElkJSQkJG4hkshKSEhI3EIkkZWQkJC4hUgiKyEhIXELkURWQkJC4hYiiayEhITELUQSWQkJCYlbiCSyEhISErcQSWQlJCQkbiGSyEpISEjcQiSRlZCQkLiFSCIrISEhcQuRRFZCQkLiFiKJrISEhMQtRBJZCQkJiVuIJLISEhIStxBJZCUkJCRuIZLISkhISNxCJJGVkJCQuIVIIishISFxC5FEVkJCQuIWIomshISExC1EElkJCQmJW4gkshISEhK3EElkJSQkJG4hkshKSAxCmREw0EcFCZQR8XvXReKvgySyEhLf0t8v/2g9laSj29jfuyoSfx1Ufu8KSEj8zlBZFmVHgaoa6JmgRyCbcc/vXSOJvxSSk5X4+0KZl/k3/4Lqa+gyCurL0G082npScdrvXS+JvxQo29/xe9dBQuJ/pb+XilLQffwv/RzlRFPiKfSYiGPmDRXFT21Bz4kUtZ/d88FvX1WJvyuSk5X4E8PPbAMzh1/yATnFHBbuta2BrX7lusICgKo6u+0paqig7k7Kif7JkqirjeJO8IOv8bgT/1vlKffq//ZBiT8X0pisxC2ACBBv+UmuJaKZPdSXgqHFzzq+Mp/Ct+OYBeyut3/oGDZxORlZ8X0vs6f2o67R9xzR30uJp6g0E7R00W8GG7fwf69/0in0CPyfPy7xZ0ESWYnfGKotpvCdbMUL/MBmkA+g50T0nQYqqr/xaQb6RFy/7m1+9B2w9UJN3R+rUkM5he8EAzO2+hVgsh8vWFR4xr18y3o2awOOmjNYQkczpZ6HsixQUcVxi1jgkt/gElTVob9X/JX4SyONyUr8ZlBrHaVdRH1T9Js++BKXU0UelGXQQD8wGVo6g70vqmn8mrPwi1+zKet4zEH0m4G6RiJsv/AVW/DYzd6ZGiso8zIQoa4x+ExCde3vvFuWSUWpbPKa7zHdxPmB19BzIiWFgbU7amiDph7Yj0BTu1/q0KkoBZ0Cvv+t/HhqqWVjF/yiAiX+dMjY8ud+7zpI/OmhtAvQWkf5cSxoBVq5Xn8DmdBcOx908EVbb2isoKRToKFDqeegvxeNrH5IsyjlnFDkm1/vbseOZmgoRwNztHQRZ1BVBy09yohAO+/BY8pzKPk0qGnStUQ2cQU6+qGVKzIZ4HeeQKC+GWhoQ2YENFehudPgZ/PjKCEUtPTQwJwfeJXNfQh1DEhFDd0D0dBCWVvq6YDiVDS2/llNU5xGBQlgao83OVY0tqbLu3HElJ9VjsSfFklk/77wkx/+D8/lb0AYyT2b0NAS/aaho9+PBeOIaGKDrmOF7Dr4UnYkj9gFudGgpnmz2tLFr8DSFbX1bzzd2c/QPZDyYtFhBKppgUxFIZemVJoJ2gZQmExnP6WEUNmyZ9HQQsguIgz08YhdFL4T/
-        </p>
-      </div>
-      <div class="home-hero-masthead row">
-        <div class="col-md-5">
-          <h1>galexite</h1>
-          <h3>undergraduate Computer Science student with too many spare time projects</h3>
-          <div class="btn-bar">
-
-          </div>
+    <div class="home-hero-root">
+      <div class="home-hero container">
+        <div class="home-hero-background">
+          <p>
+            iVBORw0KGgoAAAANSUhEUgAAAcwAAAHMCAIAAADXuQ/RAACAAElEQVR4nOydB3hUxdrH33c2vffeeyOFHkgg9A7SEUQUC3rtXr3YUK/Y9drwotjpvYfQSSCF9N5Deu+9Z+f9ntmNIYL1Kp/t/B6fPLh7ds6c2bP/+b9zZt5Rke3vAAkJCQmJWwP7vSsgISEh8VdGElkJCQmJW4gkshISEhK3EElkJSQkJG4hkshKSEhI3EIkkZWQkJC4hUgiKyEhIXELkURWQkJC4hYiiayEhITELUQSWQkJCYlbiCSyEhISErcQSWQlJCQkbiGSyEpISEjcQiSRlZCQkLiFSCIrISEhcQuRRFZCQkLiFiKJrISEhMQtRBJZCQkJiVuIJLISEhIStxBJZCUkJCRuIZLISkhISNxCJJGVkJCQuIVIIishISFxC5FEVkJCQuIWIomshISExC1EElkJCQmJW4gkshISEhK3EElkJSQkJG4hkshKSAxCmREw0EcFCZQR8XvXReKvgySyEhLf0t8v/2g9laSj29jfuyoSfx1Ufu8KSEj8zlBZFmVHgaoa6JmgRyCbcc/vXSOJvxSSk5X4+0KZl/k3/4Lqa+gyCurL0G082npScdrvXS+JvxQo29/xe9dBQuJ/pb+XilLQffwv/RzlRFPiKfSYiGPmDRXFT21Bz4kUtZ/d88FvX1WJvyuSk5X4E8PPbAMzh1/yATnFHBbuta2BrX7lusICgKo6u+0paqig7k7Kif7JkqirjeJO8IOv8bgT/1vlKffq//ZBiT8X0pisxC2ACBBv+UmuJaKZPdSXgqHFzzq+Mp/Ct+OYBeyut3/oGDZxORlZ8X0vs6f2o67R9xzR30uJp6g0E7R00W8GG7fwf69/0in0CPyfPy7xZ0ESWYnfGKotpvCdbMUL/MBmkA+g50T0nQYqqr/xaQb6RFy/7m1+9B2w9UJN3R+rUkM5he8EAzO2+hVgsh8vWFR4xr18y3o2awOOmjNYQkczpZ6HsixQUcVxi1jgkt/gElTVob9X/JX4SyONyUr8ZlBrHaVdRH1T9Js++BKXU0UelGXQQD8wGVo6g70vqmn8mrPwi1+zKet4zEH0m4G6RiJsv/AVW/DYzd6ZGiso8zIQoa4x+ExCde3vvFuWSUWpbPKa7zHdxPmB19BzIiWFgbU7amiDph7Yj0BTu1/q0KkoBZ0Cvv+t/HhqqWVjF/yiAiX+dMjY8ud+7zpI/OmhtAvQWkf5cSxoBVq5Xn8DmdBcOx908EVbb2isoKRToKFDqeegvxeNrH5IsyjlnFDkm1/vbseOZmgoRwNztHQRZ1BVBy09yohAO+/BY8pzKPk0qGnStUQ2cQU6+qGVKzIZ4HeeQKC+GWhoQ2YENFehudPgZ/PjKCEUtPTQwJwfeJXNfQh1DEhFDd0D0dBCWVvq6YDiVDS2/llNU5xGBQlgao83OVY0tqbLu3HElJ9VjsSfFklk/77wkx/+D8/lb0AYyT2b0NAS/aaho9+PBeOIaGKDrmOF7Dr4UnYkj9gFudGgpnmz2tLFr8DSFbX1bzzd2c/QPZDyYtFhBKppgUxFIZemVJoJ2gZQmExnP6WEUNmyZ9HQQsguIgz08YhdFL4T/
+          </p>
         </div>
-        <div class="col-md-7">
-          <p>
-            I've been fascinated by computers ever since I obtained a used eMac many,
-            many years ago, when I was very, very young, a fascination which, when I 
-            discovered Python at age 7, evolved in to programming, by means of small,
-            pointless scripts.
-          </p>
-          <p>
-            Skip forward to today, and I aspire to get deeply involved in the technology
-            that excited and enthralled me, particularly the hidden underpinnings of
-            computing itself: operating systems, graphics, and data science.
-          </p>
+        <div class="home-hero-masthead row">
+          <div class="col-md-5">
+            <h1>galexite</h1>
+            <h3>undergraduate Computer Science student with too many spare time projects</h3>
+            <div class="btn-bar">
+
+            </div>
+          </div>
+          <div class="col-md-7">
+            <p>
+              I've been fascinated by computers ever since I obtained a used eMac many,
+              many years ago, when I was very, very young, a fascination which, when I 
+              discovered Python at age 7, evolved in to programming, by means of small,
+              pointless scripts.
+            </p>
+            <p>
+              Skip forward to today, and I aspire to get deeply involved in the technology
+              that excited and enthralled me, particularly the hidden underpinnings of
+              computing itself: operating systems, graphics, and data science.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    
+{{ partial "navbar" . }}
+    
+    <div class="content container">
+      <h1>Content</h1>
+      <p>I should really put some content in here...</p>
+    </div>
 
+{{ partial "footer" . }}
 {{ partial "closing" . }}
