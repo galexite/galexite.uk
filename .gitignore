@@ -80,3 +80,6 @@ dist/
 
 # macOS
 .DS_Store
+
+# Vim
+*.swp
