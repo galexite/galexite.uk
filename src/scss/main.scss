@@ -1,0 +1,58 @@
+@import 'imports/variables.scss';
+
+body {
+    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    font-size: 0.7em;
+}
+
+.hero {
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    min-height: 100%;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    color: #fff;
+    background-color: $brand-color;
+
+    a, a:visited {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .focus {
+        flex: 1 1 auto;
+
+        .headline {
+            padding: 1em 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+
+    footer {
+        flex: 0 1 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero .focus .headline {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero .focus {
+        p {
+            max-width: 75%;
+        }
+
+        .headline {
+            font-size: 4em;
+        }
+    }
+}

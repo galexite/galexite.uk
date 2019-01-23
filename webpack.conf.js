@@ -8,10 +8,13 @@ export default {
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader?name=/[hash].[ext]"
       },
-      {test: /\.json$/, loader: "json-loader"},
       {
-        loader: "babel-loader",
+        test: /\.json$/,
+        loader: "json-loader"
+      },
+      {
         test: /\.js?$/,
+        loader: "babel-loader",
         exclude: /node_modules/,
         query: {cacheDirectory: true}
       }

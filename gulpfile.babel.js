@@ -7,6 +7,7 @@ import flatten from "gulp-flatten";
 import postcss from "gulp-postcss";
 import cssImport from "postcss-import";
 import cssnext from "postcss-cssnext";
+import sass from "gulp-sass";
 import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
@@ -73,10 +74,18 @@ gulp.task("css", () => (
     .pipe(browserSync.stream())
 ));
 
+gulp.task("scss", () => (
+  gulp.src("./src/scss/*.scss")
+    .pipe(sass())
+    .pipe(uglifycss())
+    .pipe(gulp.dest("./dist/css"))
+    .pipe(browserSync.stream())
+));
+
 // Build/production tasks
-gulp.task("build", gulp.series(["css", "js", "fonts"],
+gulp.task("build", gulp.series(["css", "scss", "js", "fonts"],
   (cb) => buildSite(cb, [], "production")));
-gulp.task("build-preview", gulp.series(["css", "js", "fonts"],
+gulp.task("build-preview", gulp.series(["css", "scss", "js", "fonts"],
   (cb) => buildSite(cb, hugoArgsPreview, "production")));
 
 // Development server with browsersync
@@ -90,6 +99,7 @@ gulp.task("server", gulp.series(["hugo", "css", "js", "fonts"], () => {
   });
   gulp.watch("./src/js/**/*.js", gulp.parallel(["js"]));
   gulp.watch("./src/css/**/*.css", gulp.parallel(["css"]));
+  gulp.watch("./src/scss/**/*.scss", gulp.parallel(["scss"]));
   gulp.watch("./src/fonts/**/*", gulp.parallel(["fonts"]));
   gulp.watch("./site/**/*", gulp.parallel(["hugo"]));
 }));
