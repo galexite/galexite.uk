@@ -1,17 +1,16 @@
-import gulp from "gulp";
-import PluginError from "plugin-error";
-import log from "fancy-log";
-import {spawn} from "child_process";
-import hugoBin from "hugo-bin";
-import uglifycss from "gulp-uglifycss";
-import flatten from "gulp-flatten";
-import postcss from "gulp-postcss";
-import cssImport from "postcss-import";
-import cssnext from "postcss-cssnext";
-import sass from "gulp-sass";
 import BrowserSync from "browser-sync";
+import PluginError from "plugin-error";
+import autoprefixer from "autoprefixer";
+import flatten from "gulp-flatten";
+import gulp from "gulp";
+import hugoBin from "hugo-bin";
+import log from "fancy-log";
+import postcss from "gulp-postcss";
+import sass from "gulp-sass";
+import uglifycss from "gulp-uglifycss";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
+import { spawn } from "child_process";
 
 const browserSync = BrowserSync.create();
 
@@ -66,31 +65,23 @@ gulp.task("fonts", () => (
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, hugoArgsPreview));
 
-// Compile CSS with PostCSS
-gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
-    .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext()]))
-    .pipe(uglifycss())
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream())
-));
-
 gulp.task("scss", () => (
   gulp.src("./src/scss/*.scss")
     .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
     .pipe(uglifycss())
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
 
 // Build/production tasks
-gulp.task("build", gulp.series(["css", "scss", "js", "fonts"],
+gulp.task("build", gulp.series(["scss", "js", "fonts"],
   (cb) => buildSite(cb, [], "production")));
-gulp.task("build-preview", gulp.series(["css", "scss", "js", "fonts"],
+gulp.task("build-preview", gulp.series(["scss", "js", "fonts"],
   (cb) => buildSite(cb, hugoArgsPreview, "production")));
 
 // Development server with browsersync
-gulp.task("server", gulp.series(["hugo", "css", "js", "fonts"], () => {
+gulp.task("server", gulp.series(["hugo", "scss", "js", "fonts"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -99,7 +90,6 @@ gulp.task("server", gulp.series(["hugo", "css", "js", "fonts"], () => {
     host: process.env.IP || "127.0.0.1"
   });
   gulp.watch("./src/js/**/*.js", gulp.parallel(["js"]));
-  gulp.watch("./src/css/**/*.css", gulp.parallel(["css"]));
   gulp.watch("./src/scss/**/*.scss", gulp.parallel(["scss"]));
   gulp.watch("./src/fonts/**/*", gulp.parallel(["fonts"]));
   gulp.watch("./site/**/*", gulp.parallel(["hugo"]));
