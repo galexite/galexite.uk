@@ -9,26 +9,23 @@ footer {
 }
 
 .hero {
-  height: 100vh;
-  background-color: #86D1F0;
-  background-image: url(/me.jpeg);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: contain;
-  background-origin: content-box; 
+  background: #86D1F0;
+	overflow: hidden;
 
   .container {
-    position: absolute;
-    float: none;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+		margin-top: 56px;
+    padding: 6em 1em;
+    background-image: url(/me.jpeg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
   }
 
   h1 {
     font-size: 5em;
     font-weight: bold;
+		line-height: 0.95em;
+		margin-bottom: 0.5em;
   }
 
   @media (max-width: 767.98px) {
