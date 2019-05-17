@@ -2,7 +2,6 @@
 
 body {
   font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: $navbar-height;
 }
 
 footer {
@@ -17,7 +16,7 @@ footer {
 }
 
 .navbar {
-  background: transparent;
+  background: $brand-color;
   height: $navbar-height;
 }
 
@@ -30,7 +29,7 @@ footer {
 
 .page {
   padding-top: 3em;
-  
+
   .page-masthead {
     padding-bottom: 2em;
   }
