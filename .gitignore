@@ -83,3 +83,6 @@ dist/
 
 # Vim
 *.swp
+
+# vim swapfiles
+*.swp
