@@ -17,7 +17,6 @@ footer {
 
 .navbar {
   background: $brand-color;
-  height: $navbar-height;
 }
 
 .navbar-brand {
@@ -44,5 +43,11 @@ footer {
 
   .page-content {
     padding-bottom: 3em;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    height: $navbar-height;
   }
 }
