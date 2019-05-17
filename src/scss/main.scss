@@ -2,39 +2,48 @@
 
 body {
   font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: $navbar-height;
 }
 
 footer {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   font-size: 0.7em;
+  margin-top: 2em;
+  padding: 3em 0;
 }
 
-.hero {
-  background: #86D1F0;
-	overflow: hidden;
+.navbar {
+  background: transparent;
+  height: $navbar-height;
+}
 
-  .container {
-		margin-top: 56px;
-    padding: 6em 1em;
-    background-image: url(/me.jpeg);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: contain;
+.navbar-brand {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -28px !important;
+}
+
+.page {
+  padding-top: 3em;
+  
+  .page-masthead {
+    padding-bottom: 2em;
   }
 
-  h1 {
-    font-size: 5em;
+  .page-title {
     font-weight: bold;
-		line-height: 0.95em;
-		margin-bottom: 0.5em;
   }
 
-  @media (max-width: 767.98px) {
-    h1 {
-      text-align: center;
-    }
+  .page-meta {
+    color: #777;
   }
 
-  @media (min-width: 768px) {
-    padding: 0 3rem;
+  .page-content {
+    padding-bottom: 3em;
   }
-} 
+}

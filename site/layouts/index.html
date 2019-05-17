@@ -1,18 +1,51 @@
-{{ partial "header" . }}
-    <header class="hero">
+<!DOCTYPE HTML>
+<html lang="{{ $.Site.Language }}">
+<head>
+  {{ block "title" . }}
+  <title>{{ $.Site.Title }}</title>
+  {{ end }}
+  {{ partial "head.html" . }}
+  <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body class="home">
+  {{ partial "navbar.html" . }}
+  <header class="jumbotron">
       <div class="container">
         <div class="row">
-          <h1 class="col-md-4">
-            Hello, world.
-          </h1>
-        </div>
-        <div class="row">
-          <h4 class="col-md-4">
-            I am a first-year Computer Science student with a fair few side projects
-          </h4>
+        <h1 class="col-sm-4 display-1">
+          Hello, world.
+        </h1>
+      </div>
+      <div class="row">
+        <h4 class="col-sm-4">
+          I am a first-year Computer Science student with a fair few side projects
+        </h4>
+      </div>
+    </div>
+  </header>
+  <div class="container content">
+    <div class="row">
+      <div class="col-md-9" id="projects-block">
+        <p class="p-1">
+          I am a first year undergraduate Computer Science student here in the University of Exeter, in the beautiful and captivating county of Devon, in the southwest of England. When I’m not studying or revising, I toy with my own projects within the world of computing, electronics, and more. I’ve always found myself fascinated by these machines and how they work.
+        </p>
+      </div>
+      <div class="col-md-3">
+        <div class="list-group">
+          <span class="list-group-item active"><b>Quick links</b></span>
+          <a href="https://github.com/galexite" class="list-group-item
+          list-group-item-action"><i class="fab fa-github"></i> GitHub <span class="rarr">&rarr;</span></a>
+          <a href="https://bitbucket.com/galexite" class="list-group-item list-group-item-action"><i class="fab fa-bitbucket"></i> Bitbucket <span class="rarr">&rarr;</span></a>
+          <a href="https://gitlab.com/galexite" class="list-group-item list-group-item-action"><i class="fab fa-gitlab"></i> GitLab <span class="rarr">&rarr;</span></a>
         </div>
       </div>
-    </header>
-    <div class="container content">
     </div>
-{{ partial "closing" . }}
+  </div>
+  {{ block "footer" . }}
+    {{ partial "footer.html" . }}
+  {{ end }}
+  {{ block "javascript" . }}
+    {{ partial "javascript.html" . }}
+  {{ end }}
+</body>
+</html>

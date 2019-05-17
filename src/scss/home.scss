@@ -1,0 +1,60 @@
+@import 'imports/variables.scss';
+
+body.home {
+  padding-top: 0;
+}
+
+//
+// JUMBOTRON
+// Serves as the main introductory component of the home page.
+//
+.jumbotron {
+  background: $brand-color;
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  padding-top: $navbar-height;
+
+  color: #fff;
+
+  .container {
+    padding: 6em 1em;
+    // TODO: background-image: url(/me.jpeg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 0.95em;
+    margin-bottom: 0.5em;
+  }
+
+  // Mobile (Bootstrap)
+  @media (max-width: 767.98px) {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  // Desktop (Bootstrap)
+  @media (min-width: 768px) {
+    padding: $navbar-height 3rem 0;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  padding: 1em;
+}
+
+.list-group-item-action .rarr {
+  float: right;
+}

@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div class="container">
+    <div class="page">
+      <div class="page-masthead">
+        <h1 class="page-title" role="heading">
+            {{ .Title | markdownify }}
+        </h1>
+        <div class="page-meta">
+          {{ if not .Date.IsZero }}
+          <span class="page-meta-date">
+            {{ .Date.Format "January 2, 2006" }}
+          </span>
+          {{ end }}
+          {{ if .Params.Tags }}
+          <span class="page-meta-tags">
+            {{ range .Params.Tags }}
+            <a href="{{ (urlize (printf "tags/%s" .)) | absURL }}"?>{{ . }}</a>
+            {{ end }}
+          </span>
+          {{ end }}
+        </div>
+      </div>
+      {{ with .Params.Cover }}
+      <img class="page-cover" src="{{ . | absURL }}" />
+      {{ end }}
+      <div class="page-content" role="content">
+        {{ .Content }}
+      </div>
+      {{ if or .NextInSection .PrevInSection }}
+        {{ partial "switcher.html" . }}
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
+
