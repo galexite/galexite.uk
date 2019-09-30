@@ -1,5 +1,5 @@
 baseurl = "/"
-languageCode = "en-us"
+languageCode = "en-gb"
 languageLang = "en"
 title = "galexite.uk"
 
@@ -10,13 +10,7 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [menu]
 
-[[menu.main]]
-identifier = "contact"
-name = "contact"
-url = "/contact"
-weight = 100
-
-[[menu.main]]
-identifier = "blog"
-name = "blog"
-url = "/posts"
+# [[menu.main]]
+# identifier = "blog"
+# name = "blog"
+# url = "/posts"

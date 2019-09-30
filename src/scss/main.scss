@@ -1,52 +1,7 @@
 @import 'imports/variables.scss';
 
-body {
-  font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-footer {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 0.7em;
-  margin-top: 2em;
-  padding: 3em 0;
-}
-
 .skip-link {
   padding: 1em;
   background: #000;
   color: #fff;
-}
-
-.navbar {
-  background: $brand-color;
-}
-
-.page {
-  padding-top: 3em;
-
-  .page-masthead {
-    padding-bottom: 2em;
-  }
-
-  .page-title {
-    font-weight: bold;
-  }
-
-  .page-meta {
-    color: #777;
-  }
-
-  .page-content {
-    padding-bottom: 3em;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar {
-    height: $navbar-height;
-  }
 }
