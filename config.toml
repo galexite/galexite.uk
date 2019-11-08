@@ -1,0 +1,11 @@
+baseURL = "https://galexite.uk/"
+languageCode = "en-gb"
+languageLang = "en"
+title = "galexite.uk"
+
+[menu]
+
+[[menu.main]]
+identifier = "blog"
+name = "blog"
+url = "/posts/"

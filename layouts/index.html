@@ -1,0 +1,50 @@
+{{ define "body" }}
+  <section class="hero is-info is-medium">
+    <div class="hero-head">
+      {{ partial "navbar.html" . }}
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-one-half">
+            <h1 class="title is-1 has-text-centered">
+              Hello, world.
+            </h1>
+            <p class="subtitle is-4 has-text-centered">
+              I'm a second-year Computer Science student with a fair few side projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h1 class="title">
+            About me
+          </h1>
+          <div class="content">
+            <p>
+              I’m currently studying Computer Science at an undergraduate level. When I’m not studying or revising, I toy with my own projects within the world of computing, electronics, and more. I’ve always found myself fascinated by these machines and how they work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h1 class="title">Posts</h1>
+          {{ range $index, $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+          {{ partial "entry.html" . }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ partial "footer.html" . }}
+{{ end }}

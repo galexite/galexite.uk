@@ -1,0 +1,46 @@
+  <section class="hero is-info">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              galexite.uk
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div class="navbar-menu" id="navbarMenu">
+            <div class="navbar-end">
+              {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+              <a class="navbar-item{{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+              {{ end }}
+              <a class="navbar-item" href="https://github.com/galexite">
+                 <i class="fab fa-github"></i>
+              </a>
+              <a class="navbar-item" href="https://bitbucket.com/galexite">
+                 <i class="fab fa-bitbucket"></i>
+              </a>
+              <a class="navbar-item" href="https://gitlab.com/galexite">
+                 <i class="fab fa-gitlab"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      {{ block "hero-body" . }}
+      <div class="container">
+        <h1 class="title">
+          Posts
+        </h1>
+      </div>
+      {{ end }}
+    </div>
+  </section>

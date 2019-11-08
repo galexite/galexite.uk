@@ -1,0 +1,28 @@
+{{ define "hero-body" }}
+  <div class="container">
+    <h1 class="title">
+      Posts
+    </h1>
+  </div>
+{{ end }}
+{{ define "main" }}
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h1 class="title" role="heading">
+            {{ .Title | markdownify }}
+          </h1>
+          {{ if not .Date.IsZero }}
+          <h2 class="subtitle">
+            {{ .Date.Format "January 2, 2006" }}
+          </h2>
+          {{ end }}
+          <div class="content" role="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

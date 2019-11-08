@@ -1,0 +1,23 @@
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <h3>
+                  <a href="{{ .Permalink }}">
+                    {{ .Title | markdownify }}
+                  </a>
+                </h3>
+                {{ if not .Date.IsZero }}
+                <h4>
+                  {{ .Date.Format "January 2, 2006" }}
+                </h4>
+                {{ end }}
+                {{ with .Description }}
+                {{ . | markdownify }}
+                {{ else }}
+                {{ if .Truncated }}
+                    {{ .Summary | markdownify }}
+                {{ end }}
+                {{ end }}
+              </div>
+            </div>
+          </article>
