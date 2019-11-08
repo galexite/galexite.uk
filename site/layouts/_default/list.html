@@ -3,44 +3,23 @@
 {{ end }}
 {{ define "main" }}
   <div class="container">
-    <div class="page list-page" id="content">
-      <div class="page-masthead">
-        <h1 class="page-title" role="heading">
-            {{ .Title | markdownify }}
-        </h1>
-      </div>
-      {{ range (.Paginator 8).Pages }}
-      <div class="list-page-entry">
-        <div class="list-page-entry-meta">
-          {{ if not .Date.IsZero }}
-          <span class="list-page-entry-meta-date">
-            {{ .Date.Format "January 2, 2006" }}
-          </span>
-          {{ end }}
-        </div>
-        <h2 class="list-page-entry-title">
-          <a href="{{ .Permalink }}">
-            {{ .Title | markdownify }}
-          </a>
-        </h2>
-        {{ with .Params.Cover }}
-        <img class="list-page-entry-cover" src="{{ . | absURL }}" />
-        {{ end }}
-        <div class="list-page-entry-description">
-          {{ with .Description }}
-            {{ . | markdownify }}
-          {{ else }}
-            {{ if .Truncated }}
-              {{ .Summary | markdownify }}
-            {{ end }}
-          {{ end }}
-        </div>
-        <div class="list-page-entry-read-more">
-          <a href="{{ .Permalink }}">{{ $.Site.Params.ReadMore }}</a></div>
-        </div>
-      </div>
-      {{ end }}
-      {{ partial "pagination.html" . }}
-    </div>
+    <header class="py-3">
+      <h1 class="page-title" role="heading">
+        {{ .Title | markdownify }}
+      </h1>
+    </header>
   </div>
+  <main class="container" role="main">
+    <div class="row" id="content">
+      <div class="col-md-8">
+        {{ range (.Paginator 8).Pages }}
+        {{ partial "list-page-entry.html" . }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
+      </div>
+      <aside class="col-md-4">
+
+      </aside>
+    </div>
+  </main>
 {{ end }}

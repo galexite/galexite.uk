@@ -10,7 +10,7 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [menu]
 
-# [[menu.main]]
-# identifier = "blog"
-# name = "blog"
-# url = "/posts"
+[[menu.main]]
+identifier = "blog"
+name = "blog"
+url = "/posts"

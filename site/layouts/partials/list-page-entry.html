@@ -1,0 +1,29 @@
+<div class="list-page-entry">
+  <div class="list-page-entry-meta">
+    {{ if not .Date.IsZero }}
+    <span class="list-page-entry-meta-date">
+    {{ .Date.Format "January 2, 2006" }}
+    </span>
+    {{ end }}
+  </div>
+  <h2 class="list-page-entry-title">
+    <a href="{{ .Permalink }}">
+    {{ .Title | markdownify }}
+    </a>
+  </h2>
+  {{ with .Params.Cover }}
+  <img class="list-page-entry-cover" src="{{ . | absURL }}" />
+  {{ end }}
+  <div class="list-page-entry-description">
+    {{ with .Description }}
+    {{ . | markdownify }}
+    {{ else }}
+    {{ if .Truncated }}
+        {{ .Summary | markdownify }}
+    {{ end }}
+    {{ end }}
+  </div>
+  <div class="list-page-entry-read-more">
+    <a href="{{ .Permalink }}">{{ $.Site.Params.ReadMore }}</a></div>
+  </div>
+</div>

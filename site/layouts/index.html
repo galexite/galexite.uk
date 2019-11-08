@@ -1,15 +1,7 @@
-<!DOCTYPE HTML>
-<html lang="{{ $.Site.Language }}">
-<head>
-  {{ block "title" . }}
-  <title>{{ $.Site.Title }}</title>
-  {{ end }}
-  {{ partial "head.html" . }}
-   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/home.css" />
-</head>
-<body class="home">
-  {{ partial "navbar.html" . }}
+{{ define "title" }}
+  <title>galexite.uk</title>
+{{ end }}
+{{ define "main" }}
   <header class="jumbotron jumbotron-fluid px-3 py-5">
     <div class="container">
       <div class="row justify-content-center text-center">
@@ -37,14 +29,21 @@
       </div>
     </div>
   </header>
-  <div class="container p-3">
-    {{ .Content }}
-  </div>
-  {{ block "footer" . }}
-    {{ partial "footer.html" . }}
-  {{ end }}
-  {{ block "javascript" . }}
-    {{ partial "javascript.html" . }}
-  {{ end }}
-</body>
-</html>
+  <main role="main">
+    <div class="container p-3">
+      <div class="row mb-4">
+        <div class="col-md-12">
+          {{ .Content }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          {{ range $index, $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+          {{ partial "list-page-entry.html" . }}
+          {{ end }}
+          {{ partial "pagination.html" . }}
+        </div>
+      </div>
+    </div>
+  </main>
+{{ end }}
