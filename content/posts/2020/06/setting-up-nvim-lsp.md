@@ -88,7 +88,7 @@ Plug 'Shougo/deoplete.nvim'
 let g:deoplete#enable_at_startup = 1
 
 " And a plugin connecting deoplete to nvim-lsp
-Plug "Shougo/deoplete-lsp"
+Plug 'Shougo/deoplete-lsp'
 ```
 
 Once installed, you should be able to just tab away to get your automatic code
