@@ -4,23 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    
     {{ block "title" . }}
     <title>galexite.uk</title>
     {{ end }}
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600&family=Playfair+Display:wght@600&display=swap"
       rel="stylesheet"
     />
+
     {{ $css := resources.Get "style.css" }}
     {{ $style := $css | resources.PostCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
-    {{ $js := resources.Get "collapse.js" }}
-    {{ $collapse := $js | resources.Minify }}
-    <script src="{{ $collapse.Permalink }}" defer></script>
-    <script
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      defer
-    ></script>
   </head>
   <body>
     {{ block "body" . }}
@@ -29,5 +25,14 @@
     {{ end }}
     {{ partial "footer.html" . }}
     {{ end }}
+
+    {{ $js := resources.Get "collapse.js" }}
+    {{ $collapse := $js | resources.Minify }}
+    <script src="{{ $collapse.Permalink }}" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/regular.min.js"
+      integrity="sha512-VY2o6bMeYqxgjIpqcVKGcGSsv51m6gJ5urdLkG6qHfE9JOLttv/6XzBS0+Z1QnwNoHK8Ic4EaINKWGqg+5697w=="
+      crossorigin="anonymous">
+    </script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 module.exports = {
+  map: false,
   plugins: {
     "postcss-import": {},
     ...(process.env.HUGO_ENVIRONMENT === "production"
