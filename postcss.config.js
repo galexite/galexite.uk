@@ -6,6 +6,7 @@ module.exports = {
       ? {
           "@fullhuman/postcss-purgecss": {
             content: ["./layouts/**/*.html"],
+            safelist: ["highlight", "language-*"],
           },
           cssnano: {},
         }
