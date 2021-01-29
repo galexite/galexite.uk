@@ -3,6 +3,9 @@ languageCode = "en-gb"
 languageLang = "en"
 title = "galexite.uk"
 
+[params]
+description = "Third year Computer Science student with a fair few side projects."
+
 [markup.highlight]
 codeFences = true
 guessSyntax = false

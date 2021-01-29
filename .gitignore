@@ -81,6 +81,9 @@ dist/
 # Hugo public folder
 public/
 
+# Hugo generated resources
+resources/_gen/
+
 # macOS
 .DS_Store
 
