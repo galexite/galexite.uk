@@ -9,11 +9,12 @@ I hope this will get you up and running with this great tool:
 
 `nvim-lsp` is Neovim's fully integrated language server protocol implementation
 that allows syntax checking, linting and `omnifunc` code completion within the
-editor. Currently, it is available as part of Neovim's `master` branch, so in
+editor. ~~Currently, it is available as part of Neovim's `master` branch, so in
 many cases (unless you are running Ubuntu, in which case there is a nice snap
 package available for you, so you can simply install the latest development
 release with `snap install --classic --edge neovim`), you will have to compile
-Neovim from source to start using it.
+Neovim from source to start using it.~~ As of Neovim 0.4.4, `nvim-lsp` has been
+supported in the release build.
 
 Without any language server configurations, the lsp client is useless.
 Configurations are distributed separate from the editor itself; using a plugin
