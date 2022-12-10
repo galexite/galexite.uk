@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "bulma": "^0.9.2"
+    "bootstrap-icons": "^1.10.2",
+    "bulma": "^0.9.4"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "cssnano": "^5.0.2",
-    "postcss": "^8.2.15",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.2"
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

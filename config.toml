@@ -23,3 +23,7 @@ tabWidth = 4
 identifier = "blog"
 name = "blog"
 url = "/posts/"
+
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/font/fonts"
+target = "static/fonts"

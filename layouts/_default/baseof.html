@@ -29,10 +29,5 @@
     {{ $js := resources.Get "collapse.js" }}
     {{ $collapse := $js | resources.Minify }}
     <script src="{{ $collapse.Permalink }}" defer></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/regular.min.js"
-      integrity="sha512-VY2o6bMeYqxgjIpqcVKGcGSsv51m6gJ5urdLkG6qHfE9JOLttv/6XzBS0+Z1QnwNoHK8Ic4EaINKWGqg+5697w=="
-      crossorigin="anonymous">
-    </script>
   </body>
 </html>
